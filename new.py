@@ -98,8 +98,8 @@ elif option == 'Analysis':
     elif analysis_option == 'Complete statistics':
         st.write(df.describe())
     
-    elif analysis_option == 'Information about dataframe':
-        st.write(df.info())
+    #elif analysis_option == 'Information about dataframe':
+        #st.write(df.info())
     
     elif analysis_option == 'Unique values':
         column_name = st.selectbox('Select a column', df.columns)
