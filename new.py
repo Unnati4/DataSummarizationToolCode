@@ -12,7 +12,7 @@ df = pd.DataFrame()
 # Sidebar for navigation
 option = st.sidebar.selectbox(
     'Choose your option',
-    ('Data Visualisation', 'Analysis', 'Exit')
+    ('None', 'Data Visualisation', 'Analysis', 'Exit')
 )
 
 # Read CSV/Excel file
@@ -35,11 +35,13 @@ if file is not None:
     n = st.number_input('Enter the number of rows to display', min_value=1, max_value=len(df), value=5)
     st.write(df.head(n))
 
-# The rest of your code for Data Visualisation, Analysis, and Manipulation sections remains the same
+# The rest of your code for None, Data Visualisation, Analysis, and Manipulation sections remains the same
 # Ensure to check if df is not empty before performing any operations on it
 
+if option == 'None':
+    st.write('Please choose a valid option')
 
-if option == 'Data Visualisation':
+elif option == 'Data Visualisation':
     # Visualization options
     visual_option = st.selectbox(
         'Choose a visualization type',
